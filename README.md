@@ -17,8 +17,13 @@ cd fckgoback
 go build -o fckgoback ./cmd/fckgoback
 
 # Create alias (recommended)
+# For bash/zsh:
 echo "alias fckgoback='sudo $(pwd)/fckgoback'" >> ~/.bashrc  # or ~/.zshrc
 source ~/.bashrc
+
+# For fish:
+echo "function fckgoback; sudo $(pwd)/fckgoback \$argv; end" >> ~/.config/fish/config.fish
+source ~/.config/fish/config.fish
 
 # Usage
 fckgoback
